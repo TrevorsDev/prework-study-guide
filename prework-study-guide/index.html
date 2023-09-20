@@ -11,6 +11,7 @@
     <header id="top">
       <h1>Prework Study Guide</h1>
       <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
+      <h2>✨ Open the Console to See What's Happening ✨</h2>
     </header>
     
     <main>
@@ -22,6 +23,7 @@
           <li>The body element represents the visible content shown to the user. </li>
           <li>"ul" creates an unordered list, and inside this parent tag we use an "li" element for each bullet point in our "ul". </li>
           <li>Certain attributes can be added inside the opening tag to identify elements for CSS and Javascript. </li>
+          <li>Avoiding nesting lists deeper than three levels is a good rule of thumb</li>
         </ul>
       </section>
 
@@ -36,17 +38,59 @@
       <section class="card" id="git-section">
         <h2>Git</h2>
         <ul>
+          <li>Git Flow</li>
+            <ul>
+              <li>Follow the git flow steps to add, commit, and push our work to our feature branch.</li>
+              <li>Then we open a pull request with my feature branch as the comparison branch and the default branch as the base branch, merge changes with the main branch, and close the associated GitHub issue.</li>
+            </ul>
           <li>git status: checks what branch we are currently on </li>
           <li>git checkout -b branch-name: creates a new branch and switches to it. </li>
           <li>In Git, a commit is a snapshot of the changes made to the codebase at a specific point in time. A commit is a permanent and unchangeable record of the changes made to the codebase. A commit represents a single point in the history of the codebase.A stage, on the other hand, is a temporary holding area for changes that have been made to the codebase, but have not yet been committed. When you stage changes in Git, you are preparing them for a commit, but you have not yet made the commit. This allows you to review your changes and make sure they are correct before committing them.You can think of a commit as a final version of the changes and a stage as a draft version of the changes.</li>
+          
         </ul>
       </section>
 
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
-        <ul>
+        <ul type="square">
           <li>Enter your JavaScript notes here</li>
-        </ul>
+          <li>In web development, JavaScript is the tool that takes a static HTML/CSS webpage and makes it interactive. Every time you do something with a webpage, such as click a button, retrieve data, or fill out a form, JavaScript is at work!</li>
+          <li>The console.log method was created to make it easier for developers to test their code. Developers use it daily to debug and test the code that they write.</li>
+          <li>The word console refers to a test environment that developers use to check out their code. The second part, .log(), is a method, which means a set of instructions that can be executed by a computer. The .log() method will output whatever we add inside the parentheses to the console.</li>
+          <li>Control flow is the order in which a computer executes code in a script. In JavaScript, code runs from the first statement at the top of the page, down to the last statement at the bottom of the page.</li>
+          <li>Control flow can be interrupted, however. We can use conditional statements and loops to control the order in which code is executed, or <em>if</em> it is even executed at all.</li>
+          <li>There are a few ways to create conditional statements in JavaScript.
+            <ul>
+              <li>Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true.</li>
+              <li>Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false.</li>
+              <li>Use <strong>else</strong> if to specify a new condition to test, if the first condition is false.</li>
+              <li>Use <strong>switch</strong> to specify many alternative blocks of code to be executed.</li>
+                <ul>
+                  <li>When the computer encounters an if statement in a JavaScript file, it will check to see if the condition that we provide is truthy. If it is, then it will do whatever action we ask it to do in between the curly brackets. If the condition isn’t true or has a value that isn’t truthy, then the computer will ignore whatever is in between the curly brackets and move on.</li>
+                </ul>
+              <li>An <strong>array</strong> allows us to evaluate hundreds of values at a time. While the <strong>if</strong> statement doesnt.</li>
+                <ul>
+                  <li>An array is a single variable that is used to hold a group of data. Arrays are typically used to hold data that is related in some way.</li>
+                  <li>A single array can store different <em>types</em> of data, such as strings, numbers, and so on.</li>
+                </ul>
+            </ul>
+          </li>
+          <li>The For Loop</li>
+            <ul>
+              <li>A for loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.</li>
+              <li> In order to use the for loop, we need the shape's index and the array's length. </li>
+              <li>A for loop contains the following three important statements:</li>
+                <ul>
+                  <li>Keyword 'for'.</li>
+                  <li>A three-part conditional statement.</li>
+                  <li>A code block.</li>
+                </ul>
+            </ul>
+            <ul>Functions</ul>
+              <li>A function is simply a set of instructions that tells the computer how to perform a certain task.</li>
+              <li>You must call a function by name in order to execute it when the JavaScript file is run.</li>
+              <li>Being able to call a function to execute it also means you can control where in the control flow a task is executed, or if it is executed at all.</li>
+            </ul>
       </section>
     
     </main>
@@ -54,5 +98,6 @@
     <footer>
       <p>I can code!</p>
     </footer>
+    <script src="./assets/script.js"></script>
   </body>
 </html>
