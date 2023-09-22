@@ -1,4 +1,4 @@
-# prework-study-guide
+# Study Guide Webpage
 # Bootcamp Study Guide Providing Key Notes on Using Git, HTML, CSS, and JavaScript
 
 ## Description
