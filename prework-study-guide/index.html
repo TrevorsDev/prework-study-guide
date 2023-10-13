@@ -1,103 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Why helloo</title>
-  </head>
-  <body>
-    <header id="top">
-      <h1>Prework Study Guide</h1>
-      <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." />
-      <h2>✨ Open the Console to See What's Happening ✨</h2>
-    </header>
-    
-    <main>
-      <section class="card" id="html-section">
-        <h2>HTML</h2>
-        <ul>
-          <li>Enter your HTML notes here</li>
-          <li>The head element contains information about the webpage. </li>
-          <li>The body element represents the visible content shown to the user. </li>
-          <li>"ul" creates an unordered list, and inside this parent tag we use an "li" element for each bullet point in our "ul". </li>
-          <li>Certain attributes can be added inside the opening tag to identify elements for CSS and Javascript. </li>
-          <li>Avoiding nesting lists deeper than three levels is a good rule of thumb</li>
-        </ul>
-      </section>
 
-      <section class="card" id="css-section">
-        <h2>CSS</h2>
-        <ul>
-          <li>A margin indicates how much space we want around the outside of an element.</li>
-          <li>A padding indicates how much space we want around the content inside an element.</li>
-        </ul>
-      </section>    
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/style.css">
 
-      <section class="card" id="git-section">
-        <h2>Git</h2>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <title>Why helloo</title>
+</head>
+
+<body>
+  <header id="top">
+    <h1 class="padding">Prework Study Guide</h1>
+    <img src="./assets/bowtie-cat.png" alt="Profile image of cat wearing a bow tie." class="cat" />
+    <h2 class="padding">✧˖° Open the Console to See What's Happening ✧˖°</h2>
+  </header>
+
+  <main>
+    <section class="card" id="html-section">
+      <h2 class="giveSpace">HTML</h2>
+      <h3>Attributes</h3>
+      <ul>
+        <li>HTML attributes are additional values used to identify elements for CSS and Javascript, and to configure the
+          behavior or display of an HTML element.</li>
+        <li>They are placed inside the element's opening tag and consist of two parts: a name and a value.</li>
+      </ul>
+      <ul>
+        <li>Avoiding nesting lists deeper than three levels is a good rule of thumb</li>
+      </ul>
+    </section>
+
+    <section class="card" id="css-section">
+      <h2 class="giveSpace">CSS</h2>
+      <ul>
+        <li>A margin indicates how much space we want around the outside of an element.</li>
+        <li>A padding indicates how much space we want around the content inside an element.</li>
+      </ul>
+    </section>
+
+    <section class="card" id="git-section">
+      <h2 class="giveSpace">Git</h2>
+      <ul>
+        <h3>What is Git?</h3>
+        <li>Git is a version control system that stores your code and its history, as well as separate versions of the
+          code.</li>
+        <li>Git is a system that allows you to create "save points" (called commits) of your work. It's good practice to
+          commit your work whenever you reach a good stopping point. This creates a history of changes and allows you to
+          revert to an earlier version if necessary.</li>
+        <h3>Git Flow</h3>
         <ul>
-          <li>Git Flow</li>
+          <li>Follow the git flow steps to add, commit, and push our work to our feature branch.</li>
+          <li>Then we open a pull request with my feature branch as the comparison branch and the default branch as the
+            base branch, merge changes with the main branch, and close the associated GitHub issue.</li>
+        </ul>
+        <li><b>"" .</b>references the current directory, <b>"" ..</b> references the directory above the current one,
+          and <b>cd ""</b> will move you forward in a directory</li>
+        <li><b>Git status</b>: checks what branch we are currently on </li>
+        <li>The <b>git</b> command must precede every Git statement.</li>
+        <li>The <b>checkout</b> command is to move the working branch to a new branch.</li>
+        <li><b>Git checkout -b branch-name</b>: creates a new branch and switches to it. </li>
+        <li>The "branch name", ex: 'feature/starter-code' is the name of the new branch. We have added the prefix,
+          feature, to indicate that it is a feature. It is good practice to name the branches for the feature that will
+          be developed by them to help indicate the purpose of each branch.</li>
+        <li>To code to the current working branch, ex: 'feature/starter-code', we'll need to do the
+          following:</li>
+        <ul>
+          <li><b>git add -A</b></li>
+          <ul>
+            <li>The add command adds modifications in the current working branch to the staging area.</li>
+            <li>The <b>-A</b> flag indicates that we want to add all changes.</li>
+          </ul>
+          <li>Now that we have staged those files to be committed, let’s enter the git commit command with a commit
+            message that describes what the commit contains. Ex:</li>
+          <ul>
+            <li><b>git commit -m "add starter code"</b></li>
+          </ul>
+          <li>Before we push this up to our repo, we should double-check if our local branch is in sync with the base
+            branch in GitHub. So let’s pull down any changes from the base branch.:</li>
+          <ul>
+            <li><b>git pull origin main</b></li>
+          </ul>
+        </ul>
+        <li>In Git, a commit is a snapshot of the changes made to the codebase at a specific point in time. A commit is
+          a permanent and unchangeable record of the changes made to the codebase. A commit represents a single point in
+          the history of the codebase.A stage, on the other hand, is a temporary holding area for changes that have been
+          made to the codebase, but have not yet been committed. When you stage changes in Git, you are preparing them
+          for a commit, but you have not yet made the commit. This allows you to review your changes and make sure they
+          are correct before committing them.You can think of a commit as a final version of the changes and a stage as
+          a draft version of the changes.</li>
+
+      </ul>
+    </section>
+
+    <section class="card" id="javascript-section">
+      <h2 class="giveSpace">JavaScript</h2>
+      <ul>
+
+        <li>In web development, JavaScript is the tool that takes a static HTML/CSS webpage and makes it interactive.
+          Every time you do something with a webpage, such as click a button, retrieve data, or fill out a form,
+          JavaScript is at work!</li>
+        <li>The Console</li>
+        <li>The console is a panel that displays important messages, like errors, for developers.</li>
+        <li>The console.log method was created to make it easier for developers to test their code. Developers use it
+          daily to debug and test the code that they write.</li>
+        <li>The console keyword refers to an object, a collection of data and actions, that we can use in our code.
+        </li>
+        <li>Keywords are words that are built into the JavaScript language, so the computer recognizes them and treats
+          them specially.</li>
+        <li>One action, or method, that is built into the console object is the .log() method, which means a set of
+          instructions that can be executed by a computer. .log() will output whats inside the parentheses to the
+          console.</li>
+
+        <li>Comments</li>
+        <li>Single line comments are great for adding context to your code. Multi-line comments are often best suited to
+          prevent a block of code from running.</li>
+        <li>// A double forward slash comments out a single line of code</li>
+        <li>/* A multi-line comment will comment out multiple lines */</li>
+
+        <section class="dataTypes">
+          <h3>Data Types</h3>
+          <li>Data types are the classifications we give to the different kinds of data that we use in programming.</li>
+          <li>7 types in JavaScript</li>
+          <ul>
+            <li>Number (Primitive DT)</li>
+            <li>BigInt (Primitive DT)</li>
+            <li>String (Primitive DT. They are any grouping of characters surrounded by single quotes or double quotes.)
+            </li>
+            <li>Boolean (Primitive DT)</li>
+            <li>Null (Primitive DT)</li>
+            <li>Undefined (Primitive DT)</li>
+            <li>Symbol (Object DT)</li>
+            <li>Object (Object DT)</li>
+
+        </section>
+
+        <section class="proterties">
+          <h3>Properties</h3>
+          <li>When you introduce a new piece of data into a JavaScript program, the browser saves it as an instance of
+            the data type.</li>
+          <li>All data types have access to specific properties that are passed down to each instance. </li>
+          <li>For example, every string instance has a property called length that stores the number of characters in
+            that string. </li>
+          <li>You can retrieve property information by appending the string with a period and the property name:</li>
+          <ul>
+            <li>console.log('Hello'.length); // Prints 5</li>
+            <li>In the example above, the value saved to the length property is retrieved from the instance of the
+              string, 'Hello'</li>
+          </ul>
+        </section>
+
+        <section class="methods">
+          <h3>Methods</h3> * Return information about an object, and are called by appending an instance
+          with a period ., the method name, and parentheses. *
+          <li><strong>Built-in objects</strong> - Contain methods that can be called by appending the object name with a
+            period ., the method name, and a set of parentheses.</li>
+          <ul>
+            <li>Ex: Math.random() ;
+              <br> ☝️ Math is the built-in object & .random is the method
+            </li>
+            <li>https://www.techonthenet.com/js/math_floor.php</li>
+            <li>More method Ex: console.log('hello'.toUpperCase()); // Prints 'HELLO'<br>
+              console.log('Hey'.startsWith('H')); // Prints true</li>
+          </ul>
+          </li>
+        </section>
+
+        <section class="operators">
+          <h3>Operators</h3>
+          <li>An operator is a character that performs a task in our code.</li>
+          <ul>
+            <li>Add: +</li>
+            <li>Subtract: -</li>
+            <li>Multiply: *</li>
+            <li>Divide: /</li>
+            <li>Remainder: %</li>
+            <li>Double Equals == vs. Triple Equals ===</li>
             <ul>
-              <li>Follow the git flow steps to add, commit, and push our work to our feature branch.</li>
-              <li>Then we open a pull request with my feature branch as the comparison branch and the default branch as the base branch, merge changes with the main branch, and close the associated GitHub issue.</li>
+              <li> https://codeburst.io/javascript-double-equals-vs-triple-equals-61d4ce5a121a</li>
             </ul>
-          <li>git status: checks what branch we are currently on </li>
-          <li>git checkout -b branch-name: creates a new branch and switches to it. </li>
-          <li>In Git, a commit is a snapshot of the changes made to the codebase at a specific point in time. A commit is a permanent and unchangeable record of the changes made to the codebase. A commit represents a single point in the history of the codebase.A stage, on the other hand, is a temporary holding area for changes that have been made to the codebase, but have not yet been committed. When you stage changes in Git, you are preparing them for a commit, but you have not yet made the commit. This allows you to review your changes and make sure they are correct before committing them.You can think of a commit as a final version of the changes and a stage as a draft version of the changes.</li>
-          
-        </ul>
-      </section>
+          </ul>
+          <h4>Logical Operators</h4>
+          <li>Working with conditionals means that we will be using booleans, true or false values. </li>
+          <li>In JavaScript, there are operators that work with boolean values known as logical operators.</li>
+          <li>We can use logical operators to add more sophisticated logic to our conditionals.</li>
+          <ul>
+            <li>the and operator (&&) - checks that two things are true.</li>
+            <li>the or operator (||) - If we only care about either condition being true</li>
+            <li>the not operator, otherwise known as the bang operator (!) - reverses, or negates, the value of a
+              boolean:</li>
+            <ul>
+              <li>Essentially, the ! operator will either take a true value and pass back false, or it will take a false
+                value and pass back true.</li>
+            </ul>
+          </ul>
 
-      <section class="card" id="javascript-section">
-        <h2>JavaScript</h2>
-        <ul type="square">
-          <li>Enter your JavaScript notes here</li>
-          <li>In web development, JavaScript is the tool that takes a static HTML/CSS webpage and makes it interactive. Every time you do something with a webpage, such as click a button, retrieve data, or fill out a form, JavaScript is at work!</li>
-          <li>The console.log method was created to make it easier for developers to test their code. Developers use it daily to debug and test the code that they write.</li>
-          <li>The word console refers to a test environment that developers use to check out their code. The second part, .log(), is a method, which means a set of instructions that can be executed by a computer. The .log() method will output whatever we add inside the parentheses to the console.</li>
-          <li>Control flow is the order in which a computer executes code in a script. In JavaScript, code runs from the first statement at the top of the page, down to the last statement at the bottom of the page.</li>
-          <li>Control flow can be interrupted, however. We can use conditional statements and loops to control the order in which code is executed, or <em>if</em> it is even executed at all.</li>
+        </section>
+
+        <section class="string">
+          <h3>String Concatenation</h3>
+          <li>Operators can be used to concatenate multiple strings</li>
+          <ul>
+            <li>Ex: console.log('I love to ' + 'code.')<br>
+              // Prints 'I love to code.'
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Variables (var, let, const)</h3>
+          <li>To understand the details and differences of variables, refer to this article:</li>
+          <ul>
+            <li>https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/</li>
+          </ul>
+          <li><strong>var</strong> declarations are globally scoped or function/locally scoped.</li>
+          <li><strong>let</strong> is block scoped</li>
+          <ul>
+            <li>A block is a chunk of code bounded by {}. A block lives in curly braces. Anything within curly braces is
+              a block.</li>
+          </ul>
+          <li>let can be updated but not re-declared w/in its scoped</li>
+          <li>However, if the same variable is defined in different scopes, there will be no error</li>
+          <ul>
+            <li>Why is there no error? This is because both instances are treated as different variables since they have
+              different scopes.</li>
+          </ul>
+          <li>Variables declared with the <strong>const</strong> maintain constant values.</li>
+          <li>Like let declarations, const declarations can only be accessed within the block they were declared.</li>
+          <li>const cannot be updated or re-declared</li>
+
+        </section>
+
+        <section class="conditionals">
+          <h3>Conditionals</h3>
+          <li>Control flow is the order in which a computer executes code in a script. In JavaScript, code runs from the
+            first statement at the top of the page, down to the last statement at the bottom of the page.</li>
+          <li>Control flow can be interrupted, however. We can use conditional statements and loops to control the order
+            in which code is executed, or <em>if</em> it is even executed at all.</li>
+          <li>A conditional statement checks a specific condition(s) and performs a task based on the condition(s).</li>
           <li>There are a few ways to create conditional statements in JavaScript.
             <ul>
-              <li>Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true.</li>
-              <li>Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false.</li>
-              <li>Use <strong>else</strong> if to specify a new condition to test, if the first condition is false.</li>
+              <li>Use <strong>if</strong> to specify a block of code to be executed, if a specified condition is true.
+              </li>
+              <li>Use <strong>else</strong> to specify a block of code to be executed, if the same condition is false.
+              </li>
+              <li>Use <strong>else if</strong> to specify a new condition to test, if the first condition is false.</li>
               <li>Use <strong>switch</strong> to specify many alternative blocks of code to be executed.</li>
-                <ul>
-                  <li>When the computer encounters an if statement in a JavaScript file, it will check to see if the condition that we provide is truthy. If it is, then it will do whatever action we ask it to do in between the curly brackets. If the condition isn’t true or has a value that isn’t truthy, then the computer will ignore whatever is in between the curly brackets and move on.</li>
-                </ul>
-              <li>An <strong>array</strong> allows us to evaluate hundreds of values at a time. While the <strong>if</strong> statement doesnt.</li>
-                <ul>
-                  <li>An array is a single variable that is used to hold a group of data. Arrays are typically used to hold data that is related in some way.</li>
-                  <li>A single array can store different <em>types</em> of data, such as strings, numbers, and so on.</li>
-                </ul>
+              <ul>
+                <li>When the computer encounters an if statement in a JavaScript file, it will check to see if the
+                  condition that we provide is truthy. If it is, then it will do whatever action we ask it to do in
+                  between the curly brackets. If the condition isn’t true or has a value that isn’t truthy, then the
+                  computer will ignore whatever is in between the curly brackets and move on.</li>
+              </ul>
+              <li>An <strong>array</strong> allows us to evaluate hundreds of values at a time. While the
+                <strong>if</strong> statement doesnt.
+              </li>
+              <ul>
+                <li>An array is a single variable that is used to hold a group of data. Arrays are typically used to
+                  hold data that is related in some way.</li>
+                <li>A single array can store different <em>types</em> of data, such as strings, numbers, and so on.</li>
+              </ul>
             </ul>
           </li>
-          <li>The For Loop</li>
-            <ul>
-              <li>A for loop uses the predictable pattern of indices to perform a task on all the items in an array by allowing a single code block to be executed over and over.</li>
-              <li> In order to use the for loop, we need the shape's index and the array's length. </li>
-              <li>A for loop contains the following three important statements:</li>
-                <ul>
-                  <li>Keyword 'for'.</li>
-                  <li>A three-part conditional statement.</li>
-                  <li>A code block.</li>
-                </ul>
-            </ul>
-            <ul>Functions</ul>
-              <li>A function is simply a set of instructions that tells the computer how to perform a certain task.</li>
-              <li>You must call a function by name in order to execute it when the JavaScript file is run.</li>
-              <li>Being able to call a function to execute it also means you can control where in the control flow a task is executed, or if it is executed at all.</li>
-            </ul>
-      </section>
-    
-    </main>
+        </section>
 
-    <footer>
-      <p>I can code!</p>
-    </footer>
-    <script src="./assets/script.js"></script>
-  </body>
+        <section class='ternary expression'>
+          <h3>Ternary Expression</h3>
+          <ul>
+            <li>The ternary operator is a conditional operator which evaluates either of two expressions – a true
+              expression and a false expression – based on a conditional expression that you provide.</li>
+            <li>Syntax:</li>
+            <ul>
+              <li>condition ? trueExpression : falseExpression</li>
+            </ul>
+            <li>The ternary operator can be a good replacement for if statements in some cases. It allows you to write
+              concise, cleaner, and easier-to-read lines of code if used well.</li>
+            <li>Learn properly:</li>
+            <ul>
+              <li>https://www.freecodecamp.org/news/the-ternary-operator-in-javascript/</li>
+            </ul>
+          </ul>
+
+        </section>
+
+        <section class="forLoop">
+          <h3>The For Loop</h3>
+          <ul>
+            <li>A for loop uses the predictable pattern of indices to perform a task on all the items in an array by
+              allowing a single code block to be executed over and over.</li>
+            <li> In order to use the for loop, we need the shape's index and the array's length. </li>
+            <li>A for loop contains the following three important statements:</li>
+            <ul>
+              <li>Keyword 'for'.</li>
+              <li>A three-part conditional statement.</li>
+              <li>A code block.</li>
+            </ul>
+          </ul>
+        </section>
+
+        <section class="functions">
+          <h3>Functions</h3>
+          <li>A function is simply a set of instructions that tells the computer how to perform a certain task.</li>
+          <li>You must call a function by name in order to execute it when the JavaScript file is run.</li>
+          <li>Being able to call a function to execute it also means you can control where in the control flow a task is
+            executed, or if it is executed at all.</li>
+        </section>
+
+      </ul>
+    </section>
+
+    <section class="card" id="readme-section">
+      <h2 class="giveSpace">ReadMe</h2>
+      <ul>
+      </ul>
+    </section>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>I can code!</p>
+  </footer>
+  <script src="./assets/script.js"></script>
+</body>
+
 </html>
+
+<!--Going 'off grid' in terms of following the class prompts, its showing me how important the git flow is in helping me develop a plan in stages, and then to execute that plan in those stages. Remembering to complete the git flow after each stage is complete. This gives us the ability to maintain awareness of the changes I've made to my code, and to not get lost in writting too much or overall just loosing track of what Im doing because I dont yet know how to write code efficiently enough.
+This also gave me opportunity to debug an issue that was in my code. Part my webpage in the JavaScript section was appearing separate in the parent section. After reading over my HTML I found that I had an additional closing ul tag that wasnt apart of anything. So I deleted it and my code was fixed.-->
+
+<!--shift + alt + downarrow = duplicating tag element-->
+
+<!--10/6/23: learning how to update my work onto github. I first need to correctly enter into the correct feature branch. 'feature/add-css' and 'feature/add-html' to add my work there-->//
+
+<!--With the next tutor, also review what he thinks of my HTML and CSS syntax. Also is there a way to switch to dark mode with Canvas? Bc fuq this white background?-->
+
+<!--So when creating a new branch, committing, and pulling back into the main branch, I am doing this FOR specific parts of my project. Ive added quite a bit of different things all in one without committing most recently. Ive added CSS, HTML, elements, structure, and design. How should I commit this? Under what file should I commit? Index.html, css, etc?-->
